@@ -23,6 +23,7 @@ RUN yum -y install unzip autoconf automake libtool gcc-c++ make && \
 
 FROM base
 COPY --from=build-protobuf /opt /opt
+COPY --from=sharpreflections/centos6-build-cmake /opt /opt
 COPY --from=sharpreflections/centos6-build-qt:qt-5.12.0_gcc-8.3.1 /p/ /p/
 COPY --from=sharpreflections/centos6-build-qt:qt-5.12.0_icc-19.0  /p/ /p/
 
