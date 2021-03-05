@@ -39,7 +39,7 @@ RUN yum -y install xorg-x11-server-utils libX11-devel libSM-devel libxml2-devel 
                    llvm-toolset-7 libomp-devel subversion cmake3 distcc-server && \
     # Misc (developer) tools and xvfb for QTest
     yum -y install strace valgrind bc joe vim nano mc psmisc \
-                   xorg-x11-server-Xvfb && \
+                   xorg-x11-server-Xvfb libXcomposite && \
     # For Squish
     yum -y install tigervnc-server nc && \
     yum clean all
