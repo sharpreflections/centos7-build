@@ -1,4 +1,4 @@
-FROM centos:7 AS base
+FROM centos:centos7 AS base
 LABEL maintainer="juergen.wind@sharpreflections.com"
 
 WORKDIR /build/
