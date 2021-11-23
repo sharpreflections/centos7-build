@@ -1,5 +1,5 @@
 FROM centos:7 AS base
-LABEL maintainer="dennis.brendel@sharpreflections.com"
+LABEL maintainer="juergen.wind@sharpreflections.com"
 
 WORKDIR /build/
 RUN yum -y upgrade && yum clean all
@@ -23,9 +23,9 @@ RUN yum -y install unzip autoconf automake libtool gcc-c++ make && \
 
 FROM base
 COPY --from=build-protobuf /opt /opt
-COPY --from=sharpreflections/centos6-build-cmake /opt /opt
-COPY --from=sharpreflections/centos6-build-qt:qt-5.12.0_gcc-8.3.1 /p/ /p/
-COPY --from=sharpreflections/centos6-build-qt:qt-5.12.0_icc-19.0  /p/ /p/
+COPY --from=quay.io/sharpreflections/centos6-build-cmake /opt /opt
+COPY --from=quay.io/sharpreflections/centos6-build-qt:qt-5.12.0_gcc-8.3.1 /p/ /p/
+COPY --from=quay.io/sharpreflections/centos6-build-qt:qt-5.12.0_icc-19.0  /p/ /p/
 
 # Our build dependencies
 RUN yum -y install xorg-x11-server-utils libX11-devel libSM-devel libxml2-devel libGL-devel \
