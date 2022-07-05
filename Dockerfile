@@ -2,6 +2,9 @@
 # Parameters
 ###############################################################################
 
+ARG prefix=/opt
+ARG qt_prefix=/p
+
 ###############################################################################
 # Base Image
 ###############################################################################
@@ -66,5 +69,5 @@ RUN yum -y upgrade \
 
 FROM builder
 
-COPY --from=centos7-build-protobuf /opt /opt
-COPY --from=centos7-build-qt /p/ /p/
+COPY --from=centos7-build-protobuf ${prefix} ${prefix}
+COPY --from=centos7-build-qt ${qt_prefix} ${qt_prefix}
