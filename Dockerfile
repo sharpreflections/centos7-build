@@ -69,5 +69,7 @@ RUN yum -y upgrade \
 
 FROM builder
 
+WORKDIR /
+
 COPY --from=centos7-build-protobuf ${prefix} ${prefix}
 COPY --from=centos7-build-qt ${qt_prefix} ${qt_prefix}
