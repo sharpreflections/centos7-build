@@ -43,6 +43,8 @@ RUN yum -y upgrade \
         libomp-devel \
         subversion \
         distcc-server \
+        autoconf \
+        automake \
 # Misc (developer) tools and xvfb for QTest \
         strace \
         valgrind \
