@@ -31,6 +31,10 @@ RUN yum -y upgrade \
         which \
         libXtst \
         libXext-devel \
+        autoconf \
+        automake \
+        libtool \
+        patch \
 # we need some basic fonts and manpath for the mklvars.sh script \
         urw-fonts \
         man \
@@ -43,8 +47,6 @@ RUN yum -y upgrade \
         libomp-devel \
         subversion \
         distcc-server \
-        autoconf \
-        automake \
 # Misc (developer) tools and xvfb for QTest \
         strace \
         valgrind \
