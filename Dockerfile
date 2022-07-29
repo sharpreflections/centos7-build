@@ -35,7 +35,7 @@ RUN yum -y upgrade \
         automake \
         libtool \
         patch \
-        bison \
+        byacc \
         tcl \
 # we need some basic fonts and manpath for the mklvars.sh script \
         urw-fonts \
