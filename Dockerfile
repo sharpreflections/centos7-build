@@ -36,7 +36,9 @@ RUN yum -y upgrade \
         libtool \
         patch \
         byacc \
+        flex \
         tcl \
+        sqlite \
 # we need some basic fonts and manpath for the mklvars.sh script \
         urw-fonts \
         man \
