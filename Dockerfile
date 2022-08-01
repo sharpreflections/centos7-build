@@ -36,6 +36,8 @@ RUN yum -y upgrade \
         libtool \
         patch \
         byacc \
+        bison \
+        bison-devel \
         flex \
         flex-devel \
         tcl \
