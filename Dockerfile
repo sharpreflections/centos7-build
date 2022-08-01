@@ -35,13 +35,10 @@ RUN yum -y upgrade \
         automake \
         libtool \
         patch \
-        byacc \
+        # byacc \
         bison \
-        # bison-devel \
         flex \
-        # flex-devel \
         tcl \
-        # sqlite-devel \
 # we need some basic fonts and manpath for the mklvars.sh script \
         urw-fonts \
         man \
