@@ -37,7 +37,7 @@ RUN yum -y upgrade \
         patch \
         byacc \
         flex \
-        # flex-devel \
+        flex-devel \
         tcl \
         # sqlite-devel \
 # we need some basic fonts and manpath for the mklvars.sh script \
