@@ -9,7 +9,7 @@ ARG qt_prefix=/p
 # Base Image
 ###############################################################################
 
-FROM centos7-build-base as base
+FROM quay.io/sharpreflections/centos7-build-base as base
 
 ###############################################################################
 # Builder Image
@@ -79,5 +79,5 @@ FROM builder
 
 WORKDIR /
 
-COPY --from=centos7-build-protobuf ${prefix} ${prefix}
-COPY --from=centos7-build-qt ${qt_prefix} ${qt_prefix}
+COPY --from=quay.io/sharpreflections/centos7-build-protobuf ${prefix} ${prefix}
+COPY --from=quay.io/sharpreflections/centos7-build-qt ${qt_prefix} ${qt_prefix}
