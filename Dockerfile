@@ -35,7 +35,6 @@ RUN yum -y upgrade \
         automake \
         libtool \
         patch \
-        # byacc \
         bison \
         flex \
         tcl \
