@@ -48,7 +48,7 @@ RUN yum -y upgrade \
         libgomp \
         llvm-toolset-7 \
         libomp-devel \
-        subversion \
+        sclo-subversion19 \
         distcc-server \
 # Misc (developer) tools and xvfb for QTest \
         strace \
