@@ -38,6 +38,7 @@ RUN yum -y upgrade \
         bison \
         flex \
         tcl \
+	rpm-build \
 # we need some basic fonts and manpath for the mklvars.sh script \
         urw-fonts \
         man \
