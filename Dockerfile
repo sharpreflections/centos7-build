@@ -62,6 +62,7 @@ RUN yum -y upgrade \
         psmisc \
         xorg-x11-server-Xvfb \
         libXcomposite \
+	wget \
 # For Squish \
         tigervnc-server \
         nc \
