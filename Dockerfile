@@ -63,6 +63,10 @@ RUN yum -y upgrade \
         xorg-x11-server-Xvfb \
         libXcomposite \
 	wget \
+        python2-numpy \
+	python36-numpy \
+ 	python27-scipy \
+  	python36-scipy \
 # For Squish \
         tigervnc-server \
         nc \
