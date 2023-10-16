@@ -63,10 +63,7 @@ RUN yum -y upgrade \
         xorg-x11-server-Xvfb \
         libXcomposite \
 	wget \
-        python2-numpy \
-	python36-numpy \
- 	python27-scipy \
-  	python36-scipy \
+        python2-pip \
 # For Squish \
         tigervnc-server \
         nc \
@@ -74,8 +71,13 @@ RUN yum -y upgrade \
  \
 # cmake comes as cmake3. use cmake for consistency in build scripts \
  && ln -s /usr/bin/cmake3 /usr/bin/cmake \
- && ln -s /usr/bin/ctest3 /usr/bin/ctest
+ && ln -s /usr/bin/ctest3 /usr/bin/ctest \
 
+# install numpy and scipy python packages
+ && pip install numpy==1.16.6 \
+ && pip install scipy==1.2.0 \
+ && pip3 install numpy \
+ && pip3 install scipy
 ###############################################################################
 # Final Image
 ###############################################################################
