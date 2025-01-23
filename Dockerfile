@@ -74,8 +74,8 @@ RUN yum -y upgrade \
  && ln -s /usr/bin/ctest3 /usr/bin/ctest \
 
 # install numpy and scipy python packages
- && pip install numpy==1.16.6 \
- && pip install scipy==1.2.0 \
+ && pip install numpy==1.16.6 --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org \
+ && pip install scipy==1.2.0 --trusted-host pypi.org --trusted-host pypi.python.org --trusted-host files.pythonhosted.org \
  && pip3 install numpy \
  && pip3 install scipy
 ###############################################################################
